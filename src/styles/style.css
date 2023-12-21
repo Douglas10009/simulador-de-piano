@@ -3,7 +3,9 @@ body{
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #e3f2fd;
+    background-color: #b1d8f4;
+    color: #fefefe;
+    font-family: 'Poppins', sans-serif;
 }
 
 .conteiner{
@@ -11,4 +13,76 @@ body{
     border-radius: 20px;
     padding: 35px 40px;
     border: 1px solid rebeccapurple;
+    background-color: #161616;
+}
+
+.conteiner header{
+    color: #b2b2b2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h2{
+    /* EM melhor para responsividade */
+    font-size: 1.6rem;
+}
+
+header .column{
+    display: flex;
+    align-items: center;
+}
+
+header .column span{
+    font-weight: 500;
+    margin-left: 15px;
+    font-size: 1.19rem;
+}
+
+.volume-slider input{
+    accent-color: #fefefe;
+    margin: 0 10px;
+}
+
+.keys-check input{
+    width: 60px;
+    height: 30px;
+    appearance: none;
+    border-radius: 30px;
+    background-color: #4b4b4b;
+    cursor: pointer;
+    /* Position -> O que define como o elemento vai ser desenhado na tela */
+        /* Relative -> Colocado no fluxo normal,  */
+        /* Absolute ->  Removido do fluxo normal, que desgruda dos outros elementos*/
+    position: relative;
+
+    margin: 0 10px;
+}
+
+.keys-check input::before{
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: #8c8c8c;
+    position: absolute;
+    top: 50%;
+    left: .3rem;
+    border-radius: inherit;
+    transition: all .24s ease;
+    transform: translateY(-50%);
+}
+
+.keys-check input:checked{
+    background-color: #595858;
+}
+.keys-check input:checked::before{
+    left: 2.1rem;
+    background-color: #ffffff;
+    transform: translateY(-50%);
+}
+
+.piano-keys{
+    display: flex;
+    margin-top: 40px;
+
 }
