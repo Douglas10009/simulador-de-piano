@@ -4,7 +4,8 @@ const keysCheck = document.querySelector('.keys-check input')
 
 let mapedKeys = [];
 let audio = new Audio() ;
-let musica = new Audio('./src/tunes/Erik Satie - Gymnopédie No. 1.mp3')
+let musica = new Audio('./src/tunes/Erik Satie - Gymnopédie No. 1.mp3');
+musica.loop = true;
 
 
 console.log('O que poderia acontecer se `musica` fosse tocada? 0-0');
